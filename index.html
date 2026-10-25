@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ruslan | Python developer: Telegram bots, APIs, automation</title>
+<meta name="description" content="Freelance Python developer in Norway. I build Telegram bots, REST APIs and automation tools.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Onest:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF2F5; --ink:#14202B; --muted:#52626F; --accent:#2A7DB8;
+  --bubble-in:#FFFFFF; --bubble-out:#D3E8F7; --line:#C9D4DC; --panel:#E2E9EE;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#10181F; --ink:#E7EEF3; --muted:#9AAAB6; --accent:#6DB4E8;
+    --bubble-in:#1C2832; --bubble-out:#1F4565; --line:#2A3946; --panel:#16212A; }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 Onest,system-ui,sans-serif}
+a{color:var(--accent)}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:"Bricolage Grotesque",Onest,sans-serif;line-height:1.1;margin:0}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center;padding:4.5rem 0 4rem}
+h1{font-size:clamp(2.4rem,5.5vw,4rem);letter-spacing:-.02em}
+.lead{max-width:34rem;color:var(--muted);margin:1.25rem 0 1.75rem}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-block;padding:.7rem 1.2rem;border-radius:8px;font-weight:500;text-decoration:none;border:2px solid var(--accent)}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.ghost{color:var(--accent)}
+.chat{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:1rem;max-width:380px;justify-self:end;width:100%}
+.chat-head{font-weight:500;padding:.25rem .5rem .75rem;border-bottom:1px solid var(--line);margin-bottom:.75rem}
+.chat-head small{display:block;color:var(--muted);font-weight:400}
+.msg{padding:.5rem .85rem;border-radius:14px;margin:.4rem 0;max-width:85%;width:fit-content}
+.msg.me{background:var(--bubble-out);margin-left:auto;border-bottom-right-radius:4px}
+.msg.bot{background:var(--bubble-in);border-bottom-left-radius:4px}
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(1.6rem,3vw,2.1rem);margin-bottom:1.5rem}
+.project{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.project h3{font-size:1.5rem;margin-bottom:.5rem}
+.project p{margin:.5rem 0;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem;padding:0;list-style:none}
+.tags li{border:1px solid var(--line);border-radius:6px;padding:.15rem .6rem;font-size:.9rem}
+.project img{width:100%;border-radius:12px;border:1px solid var(--line)}
+.build{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem 3rem;padding:0;list-style:none;margin:0}
+.build li strong{display:block;font-family:"Bricolage Grotesque",Onest,sans-serif;font-size:1.2rem}
+.build li span{color:var(--muted)}
+.contact p{max-width:34rem;color:var(--muted)}
+.contact ul{padding:0;list-style:none;margin:1.25rem 0 0}
+.contact li{margin:.4rem 0}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+@media (max-width:760px){
+  .hero,.project,.build{grid-template-columns:1fr}
+  .hero{padding:3rem 0 2.5rem;gap:2rem}
+  .chat{justify-self:stretch;max-width:none}
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="hero">
+    <div>
+      <h1>I build Telegram bots and APIs that save you routine work.</h1>
+      <p class="lead">Hi, I’m Ruslan, a freelance Python developer in Norway. I take small projects, explain every step in plain language, and deliver something you can run with one command.</p>
+      <div class="btns">
+        <a class="btn primary" href="mailto:YOUR_EMAIL@example.com">Email me</a>
+        <a class="btn ghost" href="https://github.com/ruslan-chornyi">See my GitHub</a>
+      </div>
+    </div>
+    <div class="chat" role="img" aria-label="Example chat with the expense tracker bot: the user adds a coffee for 45 in the food category and the bot confirms.">
+      <div class="chat-head">Spending Manager bot<small>my own project</small></div>
+      <div class="msg me">/add</div>
+      <div class="msg bot">What did you buy?</div>
+      <div class="msg me">Coffee</div>
+      <div class="msg bot">How much did it cost?</div>
+      <div class="msg me">45</div>
+      <div class="msg bot">Which category?</div>
+      <div class="msg me">food</div>
+      <div class="msg bot">Saved: Coffee, 45, food</div>
+    </div>
+  </header>
+
+  <section id="work">
+    <h2>Project: Spending Manager</h2>
+    <div class="project">
+      <div>
+        <h3>An expense tracker you can use from Telegram</h3>
+        <p>Users add, list, filter and delete expenses in a chat. Each person sees only their own data. The same logic also powers a command-line tool and a REST API.</p>
+        <p>Everything runs in Docker, and the bot is deployed on a VPS.</p>
+        <ul class="tags">
+          <li>Python</li><li>aiogram</li><li>FastAPI</li><li>SQLAlchemy</li><li>PostgreSQL</li><li>Docker Compose</li>
+        </ul>
+        <p><a href="https://github.com/ruslan-chornyi/python-spending-manager">Read the code and README on GitHub</a></p>
+      </div>
+      <img src="docs/demo.png" alt="Screenshot of the Spending Manager bot in Telegram">
+    </div>
+  </section>
+
+  <section id="build">
+    <h2>What I can build for you</h2>
+    <ul class="build">
+      <li><strong>Telegram bots</strong><span>Order forms, reminders, simple shops, step-by-step dialogs.</span></li>
+      <li><strong>REST APIs</strong><span>A backend your app or website can talk to.</span></li>
+      <li><strong>Automation scripts</strong><span>Reports, file processing, data collection from websites.</span></li>
+      <li><strong>Deployment</strong><span>Docker setup and launch on a server, with instructions.</span></li>
+    </ul>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Let’s talk about your project</h2>
+    <p>Tell me what takes too much of your time. I reply within a day and will say honestly whether I can help. I work on small projects, a few hours per week.</p>
+    <ul>
+      <li>Email: <a href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a></li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/YOUR-LINKEDIN/">linkedin.com/in/YOUR-LINKEDIN</a></li>
+      <li>GitHub: <a href="https://github.com/ruslan-chornyi">github.com/ruslan-chornyi</a></li>
+    </ul>
+  </section>
+</main>
+<footer><div class="wrap">Ruslan, Norway. Built by hand with HTML and CSS.</div></footer>
+</body>
+</html>
